@@ -1,6 +1,100 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const imagePath = 'img/heroPNG2.png';
 
+	const heroProducts = [
+		{
+			title: 'X-CHEESE',
+			badge: 'X-Cheddar',
+			kicker: 'lanche da casa',
+			description: 'Hambúrguer artesanal, cheddar derretido, alface fresca, tomate e molho especial no pão brioche.',
+			watermark: 'HAMBÚRGUER',
+			alt: 'X-Cheese',
+		},
+		{
+			title: 'X-BURGUER',
+			badge: 'X-Burguer',
+			kicker: 'clássico irresistível',
+			description: 'Hambúrguer suculento com queijo, salada crocante e molho especial para fechar o pedido.',
+			watermark: 'HAMBÚRGUER',
+			alt: 'X-Burguer',
+		},
+		{
+			title: 'X-BACON',
+			badge: 'X-Bacon',
+			kicker: 'o mais pedido',
+			description: 'Carne artesanal, bacon crocante, queijo derretido e salada fresca para uma experiência intensa.',
+			watermark: 'HAMBÚRGUER',
+			alt: 'X-Bacon',
+		},
+		{
+			title: 'X-DUPLO',
+			badge: 'X-Duplo',
+			kicker: 'para muita fome',
+			description: 'Dois hambúrgueres suculentos, cheddar, alface, tomate e molho da casa em dose dupla.',
+			watermark: 'HAMBÚRGUER',
+			alt: 'X-Duplo',
+		},
+	];
+
+	const heroTitle = document.querySelector('[data-hero-title]');
+	const heroDescription = document.querySelector('[data-hero-description]');
+	const heroWatermark = document.querySelector('[data-hero-watermark]');
+	const heroKicker = document.querySelector('[data-hero-kicker]');
+	const heroBadge = document.querySelector('[data-hero-badge]');
+	const heroImage = document.querySelector('[data-hero-image]');
+	const heroPrevButton = document.querySelector('[data-hero-prev]');
+	const heroNextButton = document.querySelector('[data-hero-next]');
+
+	let heroIndex = 0;
+
+	const updateHero = () => {
+		const product = heroProducts[heroIndex];
+
+		if (!product) {
+			return;
+		}
+
+		if (heroTitle) {
+			heroTitle.textContent = product.title;
+		}
+
+		if (heroDescription) {
+			heroDescription.textContent = product.description;
+		}
+
+		if (heroWatermark) {
+			heroWatermark.textContent = product.watermark;
+		}
+
+		if (heroKicker) {
+			heroKicker.textContent = product.kicker;
+		}
+
+		if (heroBadge) {
+			heroBadge.textContent = product.badge;
+		}
+
+		if (heroImage) {
+			heroImage.src = imagePath;
+			heroImage.alt = product.alt;
+		}
+	};
+
+	const stepHero = (direction) => {
+		heroIndex = (heroIndex + direction + heroProducts.length) % heroProducts.length;
+		updateHero();
+	};
+
+	if (heroPrevButton) {
+		heroPrevButton.addEventListener('click', () => stepHero(-1));
+	}
+
+	if (heroNextButton) {
+		heroNextButton.addEventListener('click', () => stepHero(1));
+	}
+
+	updateHero();
+
 	const menuBySection = {
 		lanches: {
 			'Tradicional': [
