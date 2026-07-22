@@ -59,6 +59,43 @@
             </article>
         </section>
     </main>
+
+    <div class="pedido-modal" data-pedido-modal aria-hidden="true">
+        <div class="pedido-modal-backdrop" data-pedido-close></div>
+        <section class="pedido-modal-panel" role="dialog" aria-modal="true" aria-labelledby="pedido-modal-title">
+            <button class="pedido-modal-close" type="button" aria-label="Fechar janela" data-pedido-close>×</button>
+            <h2 class="pedido-modal-title" id="pedido-modal-title">Antes de prosseguirmos precisamos dos seguintes dados:</h2>
+
+            <div class="pedido-modal-client">
+                <input class="pedido-modal-input" type="text" placeholder="NOME DO CLIENTE" aria-label="Nome do cliente" data-client-name>
+
+                <div class="pedido-modal-delivery">
+                    <span class="pedido-modal-label">PRECISA ENTREGAR?</span>
+                    <button class="pedido-choice active" type="button" data-delivery-choice="sim">SIM</button>
+                    <button class="pedido-choice" type="button" data-delivery-choice="nao">NÃO</button>
+                </div>
+            </div>
+
+            <div class="pedido-modal-address" data-address-group>
+                <h3 class="pedido-modal-subtitle pedido-modal-subtitle-address">ENDEREÇO</h3>
+
+                <div class="pedido-modal-address-grid">
+                    <input class="pedido-modal-input" type="text" placeholder="BAIRRO" aria-label="Bairro" data-address-bairro>
+                    <input class="pedido-modal-input" type="text" placeholder="RUA" aria-label="Rua" data-address-rua>
+                    <input class="pedido-modal-input" type="text" placeholder="NUMERO" aria-label="Número" data-address-numero>
+                </div>
+            </div>
+
+            <h3 class="pedido-modal-subtitle">PEDIDOS</h3>
+            <textarea class="pedido-modal-textarea" data-pedido-textarea rows="5" aria-label="Pedidos"></textarea>
+
+            <button class="pedido-modal-submit" type="button">
+                PEDIR AGORA
+                <span class="pedido-modal-arrow">&gt;</span>
+            </button>
+        </section>
+    </div>
+
     <script src="../js/produto.js"></script>
     <footer class="footer">
 
