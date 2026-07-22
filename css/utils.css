@@ -1,0 +1,349 @@
+@charset "UTF-8";
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+:root {
+	--font-title: "Bebas Neue", sans-serif;
+	--font-text: "Poppins", sans-serif;
+}
+
+html {
+    background-color: black;
+}
+.nome-produto {
+    font-family: var(--font-title);
+}
+.descricao-produto, .btn-pedir {
+    font-family: var(--font-text);
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.navbar-hero {
+	position: relative;
+	z-index: 5;
+	justify-content: space-between;
+	align-items: center;
+	width: min(1400px, 92vw);
+	margin: 0 auto;
+	padding: 24px 0 0;
+}
+
+.empresa {
+	text-decoration: none;
+	color: #fff;
+	margin-right: 0;
+	font-size: 2rem;
+	font-weight: 700;
+	letter-spacing: 1px;
+    z-index: 999;
+}
+
+.menu {
+	list-style: none;
+    z-index: 999;
+}
+
+.menu h2 {
+	color: white;
+}
+
+.menu li {
+	display: inline-block;
+	margin: 10px;
+}
+
+.menu a {
+	color: white;
+	font-style: normal;
+	text-decoration: none;
+}
+
+.navbar-hero .menu {
+	display: flex;
+	align-items: center;
+	gap: 28px;
+}
+
+.navbar-hero .menu li {
+	display: block;
+	margin: 0;
+}
+
+.navbar-hero .menu a {
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-size: 0.82rem;
+	opacity: 0.95;
+}
+
+.text-gigante {
+    font-family: var(--font-title);
+}
+
+.footer {
+	margin-top: 120px;
+	background: #080808;
+	border-top: 1px solid #242424;
+	padding: 80px 10% 30px;
+}
+
+.footer-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 60px;
+}
+
+.logo {
+	color: #fff;
+	font-size: 2rem;
+	margin-bottom: 20px;
+}
+
+.footer-column p {
+	color: #9b9b9b;
+	line-height: 1.8;
+}
+
+.footer-column h3 {
+	color: white;
+	margin-bottom: 25px;
+	font-size: 1.2rem;
+}
+
+.footer-column ul {
+	list-style: none;
+}
+
+.footer-column li {
+	margin-bottom: 15px;
+	color: #a6a6a6;
+}
+
+.footer-column a {
+	color: #a6a6a6;
+	text-decoration: none;
+	transition: .3s;
+}
+
+.footer-column a:hover {
+	color: #ff5b00;
+}
+
+.socials {
+	display: flex;
+	gap: 15px;
+	margin-top: 25px;
+}
+
+.socials a {
+	width: 45px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #333;
+	border-radius: 50%;
+	color: white;
+	font-size: 18px;
+	transition: .3s;
+}
+
+.socials a:hover {
+	background: #ff5b00;
+	border-color: #ff5b00;
+}
+
+.payments {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 30px;
+}
+
+.payments span {
+	padding: 10px 18px;
+	border: 1px solid #333;
+	border-radius: 30px;
+	color: white;
+}
+
+.footer-button {
+	display: inline-block;
+	background: #ff5b00;
+	color: white;
+	padding: 15px 35px;
+	border-radius: 50px;
+	font-weight: 600;
+	transition: .3s;
+}
+
+.footer-button:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 0 20px rgba(255, 91, 0, .4);
+}
+
+.footer-bottom {
+	margin-top: 70px;
+	padding-top: 30px;
+	border-top: 1px solid #222;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+.footer-bottom p {
+	color: #777;
+}
+
+.footer-bottom span {
+	color: #ff5b00;
+	font-weight: 600;
+}
+
+@media(max-width:1000px) {
+	.footer-container {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.navbar-hero {
+		flex-direction: column;
+		gap: 18px;
+		padding-top: 18px;
+	}
+}
+
+@media(max-width:650px) {
+	.footer-container {
+		grid-template-columns: 1fr;
+	}
+
+	.footer-bottom {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.navbar-hero .menu {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 14px 18px;
+	}
+}
