@@ -4,15 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empresa Burguer</title>
+
+    <link rel="canonical" href="https://empresaburger.com.br/">
+    <link rel="icon" type="image/png" href="img/logo-PNG.png">
+    <meta name="description"
+        content="Hambúrgueres artesanais preparados com ingredientes frescos, sabor intenso e entrega rápida. Faça seu pedido online.">
+    <meta name="keywords"
+        content="hamburgueria, hambúrguer artesanal, delivery, lanche, batata frita, combo, restaurante">
+    <meta name="author" content="Empresa Burger">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ff5b00">
+
+    <title>Empresa Burger | O Melhor Hambúrguer Artesanal de Goioerê</title>
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/home.css">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Empresa Burger | O melhor hambúrguer da cidade">
+    <meta property="og:description" content="Ingredientes frescos, sabor intenso e entrega rápida.">
+    <meta property="og:image" content="https://seudominio.com/assets/banner.jpg">
+    <meta property="og:url" content="https://seudominio.com">
+    <meta property="og:site_name" content="Empresa Burger">
+    <meta property="og:locale" content="pt_BR">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Empresa Burger | O melhor hambúrguer da cidade">
+    <meta name="twitter:description" content="Ingredientes frescos, sabor intenso e entrega rápida.">
+    <meta name="twitter:image" content="https://empresaburger.com.br/assets/banner.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"Restaurant",
+        "name":"Empresa Burger",
+        "image":"https://empresaburger.com.br/assets/banner.webp",
+        "telephone":"+55 44 99999-9999",
+        "servesCuisine":"Hambúrguer Artesanal",
+        "address":{
+            "@type":"PostalAddress",
+            "addressLocality":"Goioerê",
+            "addressRegion":"PR",
+            "addressCountry":"BR"
+        }
+    }
+    </script>
 </head>
 
 <body>
@@ -21,7 +66,7 @@
 
             <div class="top-gradient"></div>
 
-            <img src="img/heroWEBP.webp" alt="imagem da home">
+            <img id="inicio" src="img/heroWEBP.webp" alt="imagem da home">
 
             <div class="bottom-gradient"></div>
 
@@ -33,19 +78,19 @@
                     data-menu-toggle>
                     <i class="fa-solid fa-bars"></i>
                 </button>
-                <a class="empresa" href="">Empresa Burguer</a>
+                <a class="empresa" href="#inicio">Empresa Burguer</a>
                 <nav class="menu">
                     <li>
                         <a href="#">Inicio</a>
                     </li>
                     <li>
-                        <a href="">Cardápio</a>
-                    </li>
-                    <li>
-                        <a href="">Pedir</a>
+                        <a href="#cardapio">Cardápio</a>
                     </li>
                     <li>
                         <a href="">Localização</a>
+                    </li>
+                    <li class="pedido">
+                        <a href="">Pedir</a>
                     </li>
                 </nav>
             </article>
@@ -675,6 +720,10 @@
 
             </article>
         </section>
+        <button class="btn-pedir">
+            PEDIR AGORA
+            <span class="btn-icone"><i class="fa-solid fa-chevron-right"></i></span>
+        </button>
         <section class="menu-categorias">
 
             <h2 class="titulo-cardapio">Porções</h2>
@@ -1006,7 +1055,12 @@
                 </div>
 
             </article>
+
         </section>
+        <button class="btn-pedir">
+            PEDIR AGORA
+            <span class="btn-icone"><i class="fa-solid fa-chevron-right"></i></span>
+        </button>
         <section class="menu-categorias">
 
             <h2 class="titulo-cardapio">Bebidas</h2>
@@ -1339,6 +1393,10 @@
 
             </article>
         </section>
+        <button class="btn-pedir">
+            PEDIR AGORA
+            <span class="btn-icone"><i class="fa-solid fa-chevron-right"></i></span>
+        </button>
     </main>
     <footer class="footer">
 
@@ -1408,8 +1466,45 @@
         </div>
 
     </footer>
+    <div class="pedido-modal" data-pedido-modal aria-hidden="true">
+        <div class="pedido-modal-backdrop" data-pedido-close></div>
+        <section class="pedido-modal-panel" role="dialog" aria-modal="true" aria-labelledby="pedido-modal-title">
+            <button class="pedido-modal-close" type="button" aria-label="Fechar janela" data-pedido-close>×</button>
+            <h2 class="pedido-modal-title" id="pedido-modal-title">Antes de prosseguirmos precisamos dos seguintes dados:</h2>
+
+            <div class="pedido-modal-client">
+                <input class="pedido-modal-input" type="text" placeholder="NOME DO CLIENTE" aria-label="Nome do cliente" data-client-name>
+
+                <div class="pedido-modal-delivery">
+                    <span class="pedido-modal-label">PRECISA ENTREGAR?</span>
+                    <button class="pedido-choice active" type="button" data-delivery-choice="sim">SIM</button>
+                    <button class="pedido-choice" type="button" data-delivery-choice="nao">NÃO</button>
+                </div>
+            </div>
+
+            <div class="pedido-modal-address" data-address-group>
+                <h3 class="pedido-modal-subtitle pedido-modal-subtitle-address">ENDEREÇO</h3>
+
+                <div class="pedido-modal-address-grid">
+                    <input class="pedido-modal-input" type="text" placeholder="BAIRRO" aria-label="Bairro" data-address-bairro>
+                    <input class="pedido-modal-input" type="text" placeholder="RUA" aria-label="Rua" data-address-rua>
+                    <input class="pedido-modal-input" type="text" placeholder="NUMERO" aria-label="Número" data-address-numero>
+                </div>
+            </div>
+
+            <h3 class="pedido-modal-subtitle">PEDIDOS</h3>
+            <textarea class="pedido-modal-textarea" data-pedido-textarea rows="5" aria-label="Pedidos"></textarea>
+
+            <button class="pedido-modal-submit" type="button">
+                PEDIR AGORA
+                <span class="pedido-modal-arrow">&gt;</span>
+            </button>
+        </section>
+    </div>
+
     <script src="js/menu-mobile.js"></script>
     <script src="js/todosProdutos.js"></script>
+    <script src="js/pedido-modal.js"></script>
 </body>
 
 </html>

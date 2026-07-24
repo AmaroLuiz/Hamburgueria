@@ -16,25 +16,28 @@
 </head>
 
 <body>
-    <header class="navbar">
-        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-toggle>
-            <i class="fa-solid fa-bars"></i>
-        </button>
-        <a class="empresa" href="../index.html">Empresa Burguer</a>
-        <nav class="menu">
-            <li>
-                <a href="">Inicio</a>
-            </li>
-            <li>
-                <a href="">Cardápio</a>
-            </li>
-            <li>
-                <a href="">Pedir</a>
-            </li>
-            <li>
-                <a href="">Localização</a>
-            </li>
-        </nav>
+    <header>
+        <article class="navbar">
+                <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+                    data-menu-toggle>
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <a class="empresa" href="../index.html">Empresa  Burguer</a>
+                <nav class="menu">
+                    <li>
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#cardapio">Cardápio</a>
+                    </li>
+                    <li>
+                        <a href="">Localização</a>
+                    </li>
+                    <li class="pedido">
+                        <a href="">Pedir</a>
+                    </li>
+                </nav>
+            </article>
     </header>
     <div class="menu-backdrop" data-menu-backdrop></div>
     <main>
@@ -102,6 +105,7 @@
 
     <script src="../js/menu-mobile.js"></script>
     <script src="../js/produto.js"></script>
+    <script src="../js/pedido-modal.js"></script>
     <footer class="footer">
 
         <div class="footer-container">
