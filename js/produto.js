@@ -69,86 +69,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const productLabel = productName || 'produto';
 
-    const updatePedidoText = () => {
-        if (!pedidoTextarea) {
-            return;
-        }
-
-        const clientName = clientNameInput?.value.trim();
-        const deliveryIsYes = document.querySelector('[data-delivery-choice="sim"]')?.classList.contains('active');
-        const bairro = addressBairro?.value.trim();
-        const rua = addressRua?.value.trim();
-        const numero = addressNumero?.value.trim();
-        const clientPrefix = clientName ? `${clientName}, ` : '';
-
-        if (deliveryIsYes) {
-            pedidoTextarea.value = `Gostaria de pedir ${productLabel}. ${clientPrefix}para entregar no bairro ${bairro || '____'}, rua ${rua || '____'}, numero ${numero || '____'}.`;
-            return;
-        }
-
-        pedidoTextarea.value = `Gostaria de pedir ${productLabel}.${clientName ? ` Cliente: ${clientName}.` : ''}`;
-    };
-
-    const openModal = () => {
-        updatePedidoText();
-
-        if (pedidoModal) {
-            pedidoModal.classList.add('open');
-            pedidoModal.setAttribute('aria-hidden', 'false');
-        }
-    };
-
-    const closeModal = () => {
-        if (pedidoModal) {
-            pedidoModal.classList.remove('open');
-            pedidoModal.setAttribute('aria-hidden', 'true');
-        }
-    };
-
-    if (pedidoButton) {
-        pedidoButton.addEventListener('click', openModal);
-    }
-
-    pedidoCloseButtons.forEach((button) => {
-        button.addEventListener('click', closeModal);
-    });
-
-    deliveryChoices.forEach((choice) => {
-        choice.addEventListener('click', () => {
-            deliveryChoices.forEach((currentChoice) => currentChoice.classList.remove('active'));
-            choice.classList.add('active');
-
-            if (addressGroup) {
-                addressGroup.classList.toggle('visible', choice.dataset.deliveryChoice === 'sim');
+    if (imageElement) {
+        imageElement.addEventListener('click', () => {
+            if (typeof window.openPedidoModal === 'function') {
+                window.openPedidoModal(productLabel);
             }
-
-            updatePedidoText();
         });
-    });
-
-    [addressBairro, addressRua, addressNumero].forEach((field) => {
-        if (!field) {
-            return;
-        }
-
-        field.addEventListener('input', updatePedidoText);
-    });
-
-    if (clientNameInput) {
-        clientNameInput.addEventListener('input', updatePedidoText);
-    }
-
-    if (addressGroup) {
-        addressGroup.classList.add('visible');
-    }
-
-    if (document.querySelector('[data-delivery-choice="nao"]')?.classList.contains('active')) {
-        addressGroup?.classList.remove('visible');
     }
 
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
-            closeModal();
+            // closeModal is now in pedido-modal.js
         }
     });
 });

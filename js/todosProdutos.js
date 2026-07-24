@@ -1,6 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const imagePath = 'img/heroPNG2.png';
-    const productImagePath = '../img/heroPNG2.png';
+    const imagePath = 'img/heroPNG2.webp';
+    const productImagePath = '../img/heroPNG2.webp';
+    const sectionImages = {
+        lanches: {
+            display: 'img/heroPNG2.webp',
+            product: '../img/heroPNG2.webp',
+        },
+        porcoes: {
+            display: 'img/batata.webp',
+            product: '../img/batata.webp',
+        },
+        bebidas: {
+            display: 'img/coca.webp',
+            product: '../img/coca.webp',
+        },
+    };
     const productPagePath = 'html/produto.html';
 
     const heroProducts = [
@@ -220,12 +234,17 @@ document.addEventListener('DOMContentLoaded', () => {
         .trim()
         .toLowerCase();
 
-    const renderCards = (grid, items) => {
-        grid.innerHTML = items.map((item) => `
-			<article class="card" data-product-category="${grid.previousElementSibling?.querySelector('.active')?.textContent?.trim() || ''}" data-product-name="${item.name}" data-product-price="${item.price}" data-product-description="${item.description}" data-product-image="${productImagePath}" data-product-alt="${item.name}">
+    const renderCards = (grid, items, sectionKey) => {
+        const sectionImage = sectionImages[sectionKey] || sectionImages.lanches;
+        const cart = JSON.parse(localStorage.getItem('burguer_cart') || '{}');
+
+        grid.innerHTML = items.map((item) => {
+            const quantity = cart[item.name] || 0;
+            return `
+            <article class="card" data-product-category="${grid.previousElementSibling?.querySelector('.active')?.textContent?.trim() || ''}" data-product-name="${item.name}" data-product-price="${item.price}" data-product-description="${item.description}" data-product-image="${sectionImage.product}" data-product-alt="${item.name}">
 				<span class="card-price">${item.price}</span>
 				<div class="card-image">
-					<img src="${imagePath}" alt="${item.name}">
+                    <img src="${sectionImage.display}" alt="${item.name}">
 				</div>
 				<div class="card-body">
 					<h3>${item.name}</h3>
@@ -234,13 +253,24 @@ document.addEventListener('DOMContentLoaded', () => {
 				<div class="card-footer">
 					<div class="quantity">
 						<button type="button">-</button>
-						<span>0</span>
+						<span>${quantity}</span>
 						<button type="button">+</button>
 					</div>
 					<button class="buy-btn" type="button">Pedir</button>
 				</div>
 			</article>
-		`).join('');
+		`;
+        }).join('');
+    };
+
+    const updateCart = (productName, quantity) => {
+        const cart = JSON.parse(localStorage.getItem('burguer_cart') || '{}');
+        if (quantity > 0) {
+            cart[productName] = quantity;
+        } else {
+            delete cart[productName];
+        }
+        localStorage.setItem('burguer_cart', JSON.stringify(cart));
     };
 
     document.querySelectorAll('.menu-categorias').forEach((section) => {
@@ -263,18 +293,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 const quantityContainer = quantityButton.parentElement;
                 const counter = quantityContainer?.querySelector('span');
 
-                if (!counter) {
+                if (!counter || !card) {
                     return;
                 }
 
+                const productName = card.dataset.productName;
                 const currentValue = Number(counter.textContent) || 0;
+                let newValue = currentValue;
 
                 if (quantityButton.textContent.trim() === '+') {
-                    counter.textContent = String(currentValue + 1);
-                    return;
+                    newValue = currentValue + 1;
+                } else {
+                    newValue = Math.max(0, currentValue - 1);
                 }
 
-                counter.textContent = String(Math.max(0, currentValue - 1));
+                counter.textContent = String(newValue);
+                if (productName) {
+                    updateCart(productName, newValue);
+                }
                 return;
             }
 
@@ -302,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             buttons.forEach((currentButton) => currentButton.classList.remove('active'));
             button.classList.add('active');
-            renderCards(grid, items);
+            renderCards(grid, items, sectionKey);
         };
 
         buttons.forEach((button) => {

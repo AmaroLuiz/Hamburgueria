@@ -4,15 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empresa Burguer</title>
+
+    <link rel="canonical" href="https://empresaburger.com.br/">
+    <link rel="icon" type="image/png" href="img/logo-PNG.png">
+    <meta name="description"
+        content="Hambúrgueres artesanais preparados com ingredientes frescos, sabor intenso e entrega rápida. Faça seu pedido online.">
+    <meta name="keywords"
+        content="hamburgueria, hambúrguer artesanal, delivery, lanche, batata frita, combo, restaurante">
+    <meta name="author" content="Empresa Burger">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ff5b00">
+
+    <title>Empresa Burger | O Melhor Hambúrguer Artesanal de Goioerê</title>
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/home.css">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Empresa Burger | O melhor hambúrguer da cidade">
+    <meta property="og:description" content="Ingredientes frescos, sabor intenso e entrega rápida.">
+    <meta property="og:image" content="https://seudominio.com/assets/banner.jpg">
+    <meta property="og:url" content="https://seudominio.com">
+    <meta property="og:site_name" content="Empresa Burger">
+    <meta property="og:locale" content="pt_BR">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Empresa Burger | O melhor hambúrguer da cidade">
+    <meta name="twitter:description" content="Ingredientes frescos, sabor intenso e entrega rápida.">
+    <meta name="twitter:image" content="https://empresaburger.com.br/assets/banner.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"Restaurant",
+        "name":"Empresa Burger",
+        "image":"https://empresaburger.com.br/assets/banner.webp",
+        "telephone":"+55 44 92001-1084",
+        "servesCuisine":"Hambúrguer Artesanal",
+        "address":{
+            "@type":"PostalAddress",
+            "addressLocality":"Goioerê",
+            "addressRegion":"PR",
+            "addressCountry":"BR"
+        }
+    }
+    </script>
 </head>
 
 <body>
@@ -21,7 +66,7 @@
 
             <div class="top-gradient"></div>
 
-            <img src="img/hero.png" alt="imagem da home">
+            <img id="inicio" src="img/heroWEBP.webp" alt="imagem da home">
 
             <div class="bottom-gradient"></div>
 
@@ -29,22 +74,24 @@
         <section class="hero-content">
 
             <article class="navbar">
-                <a class="empresa" href="">Empresa Burguer</a>
+                <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+                    data-menu-toggle>
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <a class="empresa" href="#inicio">Empresa Burguer</a>
                 <nav class="menu">
                     <li>
                         <a href="#">Inicio</a>
                     </li>
                     <li>
-                        <a href="">Cardápio</a>
+                        <a href="#cardapio">Cardápio</a>
                     </li>
-                    <li>
+                    <li class="pedido">
                         <a href="">Pedir</a>
-                    </li>
-                    <li>
-                        <a href="">Localização</a>
                     </li>
                 </nav>
             </article>
+            <div class="menu-backdrop" data-menu-backdrop></div>
             <article class="hero-text">
                 <h1>O <span class="hero-destaque">melhor</span> <br> da cidade</h1>
                 <p>Ingredientes <strong>frescos</strong>,<br>sabor <strong>intenso</strong> e uma <br>experiência que
@@ -52,38 +99,42 @@
                 </p>
                 <article class="btns-hero">
                     <a class="btn-hero-text pedido" href="">Fazer pedido</a>
-                    <a class="btn-hero-text cardapio" href="">Cardápio</a>
+                    <a class="btn-hero-text cardapio" href="#cardapio">Cardápio</a>
                 </article>
             </article>
         </section>
     </header>
+
     <main>
         <section class="reviews">
+            <div class="reviews-track">
 
-            <article class="review-card">
+                <article class="review-card">
 
-                <div class="review-header">
+                    <div class="review-header">
 
-                    <div class="review-user">
+                        <div class="review-user">
 
-                        <div class="review-avatar">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
-                                viewBox="0 0 16 16">
-                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" />
-                            </svg>
-                        </div>
+                            <div class="review-avatar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
+                                    viewBox="0 0 16 16">
+                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" />
+                                </svg>
+                            </div>
 
-                        <div>
+                            <div>
 
-                            <h3>Vitor Felicio</h3>
+                                <h3>Vitor Felicio</h3>
 
-                            <div class="review-info">
+                                <div class="review-info">
 
-                                <div class="stars">
-                                    ★★★★★
+                                    <div class="stars">
+                                        ★★★★★
+                                    </div>
+
+                                    <span>4 dias atrás</span>
+
                                 </div>
-
-                                <span>4 dias atrás</span>
 
                             </div>
 
@@ -91,40 +142,40 @@
 
                     </div>
 
-                </div>
+                    <p>
+                        "<strong>Bom lanche</strong>, ótima escolha pra quem está
+                        passando pela cidade. Rápido e
+                        <strong>barato</strong> pelo que entrega."
+                    </p>
 
-                <p>
-                    "<strong>Bom lanche</strong>, ótima escolha pra quem está
-                    passando pela cidade. Rápido e
-                    <strong>barato</strong> pelo que entrega."
-                </p>
+                </article>
 
-            </article>
+                <article class="review-card">
 
-            <article class="review-card">
+                    <div class="review-header">
 
-                <div class="review-header">
+                        <div class="review-user">
 
-                    <div class="review-user">
+                            <div class="review-avatar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
+                                    viewBox="0 0 16 16">
+                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" />
+                                </svg>
+                            </div>
 
-                        <div class="review-avatar">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
-                                viewBox="0 0 16 16">
-                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" />
-                            </svg>
-                        </div>
+                            <div>
 
-                        <div>
+                                <h3>André Pereira</h3>
 
-                            <h3>André Pereira</h3>
+                                <div class="review-info">
 
-                            <div class="review-info">
+                                    <div class="stars">
+                                        ★★★★★
+                                    </div>
 
-                                <div class="stars">
-                                    ★★★★★
+                                    <span>1 semana atrás</span>
+
                                 </div>
-
-                                <span>1 semana atrás</span>
 
                             </div>
 
@@ -132,39 +183,39 @@
 
                     </div>
 
-                </div>
+                    <p>
+                        "Lanche sensacional no <strong>centro da cidade</strong>.
+                        Atendimento excelente e ambiente familiar!"
+                    </p>
 
-                <p>
-                    "Lanche sensacional no <strong>centro da cidade</strong>.
-                    Atendimento excelente e ambiente familiar!"
-                </p>
+                </article>
 
-            </article>
+                <article class="review-card">
 
-            <article class="review-card">
+                    <div class="review-header">
 
-                <div class="review-header">
+                        <div class="review-user">
 
-                    <div class="review-user">
+                            <div class="review-avatar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
+                                    viewBox="0 0 16 16">
+                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" />
+                                </svg>
+                            </div>
 
-                        <div class="review-avatar">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
-                                viewBox="0 0 16 16">
-                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" />
-                            </svg>
-                        </div>
+                            <div>
 
-                        <div>
+                                <h3>Carla Almeida</h3>
 
-                            <h3>Carla Almeida</h3>
+                                <div class="review-info">
 
-                            <div class="review-info">
+                                    <div class="stars">
+                                        ★★★★★
+                                    </div>
 
-                                <div class="stars">
-                                    ★★★★★
+                                    <span>2 meses atrás</span>
+
                                 </div>
-
-                                <span>2 meses atrás</span>
 
                             </div>
 
@@ -172,14 +223,133 @@
 
                     </div>
 
-                </div>
+                    <p>
+                        "Comida é <strong>boa</strong>, atendimento
+                        <strong>rápido</strong> e de qualidade."
+                    </p>
 
-                <p>
-                    "Comida é <strong>boa</strong>, atendimento
-                    <strong>rápido</strong> e de qualidade."
-                </p>
+                </article>
+                <article class="review-card">
 
-            </article>
+                    <div class="review-header">
+
+                        <div class="review-user">
+
+                            <div class="review-avatar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
+                                    viewBox="0 0 16 16">
+                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" />
+                                </svg>
+                            </div>
+
+                            <div>
+
+                                <h3>Vitor Felicio</h3>
+
+                                <div class="review-info">
+
+                                    <div class="stars">
+                                        ★★★★★
+                                    </div>
+
+                                    <span>4 dias atrás</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+                        "<strong>Bom lanche</strong>, ótima escolha pra quem está
+                        passando pela cidade. Rápido e
+                        <strong>barato</strong> pelo que entrega."
+                    </p>
+
+                </article>
+
+                <article class="review-card">
+
+                    <div class="review-header">
+
+                        <div class="review-user">
+
+                            <div class="review-avatar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
+                                    viewBox="0 0 16 16">
+                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" />
+                                </svg>
+                            </div>
+
+                            <div>
+
+                                <h3>André Pereira</h3>
+
+                                <div class="review-info">
+
+                                    <div class="stars">
+                                        ★★★★★
+                                    </div>
+
+                                    <span>1 semana atrás</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+                        "Lanche sensacional no <strong>centro da cidade</strong>.
+                        Atendimento excelente e ambiente familiar!"
+                    </p>
+
+                </article>
+
+                <article class="review-card">
+
+                    <div class="review-header">
+
+                        <div class="review-user">
+
+                            <div class="review-avatar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor"
+                                    viewBox="0 0 16 16">
+                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" />
+                                </svg>
+                            </div>
+
+                            <div>
+
+                                <h3>Carla Almeida</h3>
+
+                                <div class="review-info">
+
+                                    <div class="stars">
+                                        ★★★★★
+                                    </div>
+
+                                    <span>2 meses atrás</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+                        "Comida é <strong>boa</strong>, atendimento
+                        <strong>rápido</strong> e de qualidade."
+                    </p>
+
+                </article>
+            </div>
 
         </section>
 
@@ -187,10 +357,10 @@
 
             <div class="destaque-content">
                 <h3 class="destaque-title">Smash-Bacon</h3>
-                <p class="destaque-text">Dois smashs suculentos, queijo<br>
-                    cheddar derretido, bacon crocante,<br>
-                    alface fresca, tomate fatiado, cebola<br>
-                    roxa e nosso molho especial no pão<br>
+                <p class="destaque-text">Dois smashs suculentos, queijo<br class="desktop-br">
+                    cheddar derretido, bacon crocante,<br class="desktop-br">
+                    alface fresco, tomate fatiado, cebola<br class="desktop-br">
+                    roxa e nosso molho especial no pão<br class="desktop-br">
                     brioche.
                 </p>
                 <div class="destaque-feture">
@@ -210,14 +380,14 @@
                     </div>
                 </div>
             </div>
-            <img class="destaque-hamburguer" src="img/hamburguer-inicial.png" alt="hamburguer do destaque">
-            <img class="destaque-salsinha-1" src="img/salsinha.png" alt="">
-            <img class="destaque-salsinha-2" src="img/salsinha.png" alt="">
+            <img class="destaque-hamburguer" src="img/hamburguer-inicial.webp" alt="hamburguer do destaque">
+            <img class="destaque-salsinha-1" src="img/salsinha.webp" alt="">
+            <img class="destaque-salsinha-2" src="img/salsinha.webp" alt="">
         </section>
 
         <section class="menu-categorias">
 
-            <h2 class="titulo-cardapio">Lanches</h2>
+            <h2 id="cardapio" class="titulo-cardapio">Lanches</h2>
 
             <div class="categorias">
 
@@ -252,7 +422,7 @@
             <article class="card">
                 <span class="card-price">R$ 29,90</span>
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
                 <div class="card-body">
                     <h3>COMBO FOME</h3>
@@ -278,7 +448,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -317,7 +487,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -356,7 +526,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -395,7 +565,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -434,7 +604,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -473,7 +643,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -512,7 +682,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -547,6 +717,10 @@
 
             </article>
         </section>
+        <button class="btn-pedir">
+            PEDIR AGORA
+            <span class="btn-icone"><i class="fa-solid fa-chevron-right"></i></span>
+        </button>
         <section class="menu-categorias">
 
             <h2 class="titulo-cardapio">Porções</h2>
@@ -584,7 +758,7 @@
             <article class="card">
                 <span class="card-price">R$ 29,90</span>
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
                 <div class="card-body">
                     <h3>COMBO FOME</h3>
@@ -610,7 +784,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -649,7 +823,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -688,7 +862,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -727,7 +901,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -766,7 +940,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -805,7 +979,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -844,7 +1018,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -878,7 +1052,12 @@
                 </div>
 
             </article>
+
         </section>
+        <button class="btn-pedir">
+            PEDIR AGORA
+            <span class="btn-icone"><i class="fa-solid fa-chevron-right"></i></span>
+        </button>
         <section class="menu-categorias">
 
             <h2 class="titulo-cardapio">Bebidas</h2>
@@ -916,7 +1095,7 @@
             <article class="card">
                 <span class="card-price">R$ 29,90</span>
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
                 <div class="card-body">
                     <h3>COMBO FOME</h3>
@@ -942,7 +1121,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -981,7 +1160,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -1020,7 +1199,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -1059,7 +1238,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -1098,7 +1277,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -1137,7 +1316,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -1176,7 +1355,7 @@
                 <span class="card-price">R$ 29,90</span>
 
                 <div class="card-image">
-                    <img src="img/heroPNG2.png" alt="Hambúrguer">
+                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
                 </div>
 
                 <div class="card-body">
@@ -1211,6 +1390,10 @@
 
             </article>
         </section>
+        <button class="btn-pedir">
+            PEDIR AGORA
+            <span class="btn-icone"><i class="fa-solid fa-chevron-right"></i></span>
+        </button>
     </main>
     <footer class="footer">
 
@@ -1246,7 +1429,7 @@
 
                 <ul>
                     <li>📍 Goioerê - PR</li>
-                    <li>📞 (44) 99999-9999</li>
+                    <li>📞 (44) 92001-1084</li>
                     <li>📧 contato@amarosburger.com</li>
                     <li>🕒 Todos os dias • 18h às 23h</li>
                 </ul>
@@ -1262,16 +1445,16 @@
                     <span>Elo</span>
                 </div>
 
-                <a href="#" class="footer-button">
+                <button class="footer-button">
                     Fazer Pedido
-                </a>
+                </button>
             </div>
 
         </div>
 
         <div class="footer-bottom">
             <p>
-                © 2026 Amaro's Burger • Todos os direitos reservados
+                © 2026 Empresa Burger • Todos os direitos reservados
             </p>
 
             <p>
@@ -1280,7 +1463,45 @@
         </div>
 
     </footer>
+    <div class="pedido-modal" data-pedido-modal aria-hidden="true">
+        <div class="pedido-modal-backdrop" data-pedido-close></div>
+        <section class="pedido-modal-panel" role="dialog" aria-modal="true" aria-labelledby="pedido-modal-title">
+            <button class="pedido-modal-close" type="button" aria-label="Fechar janela" data-pedido-close>×</button>
+            <h2 class="pedido-modal-title" id="pedido-modal-title">Antes de prosseguirmos precisamos dos seguintes dados:</h2>
+
+            <div class="pedido-modal-client">
+                <input class="pedido-modal-input" type="text" placeholder="NOME DO CLIENTE" aria-label="Nome do cliente" data-client-name>
+
+                <div class="pedido-modal-delivery">
+                    <span class="pedido-modal-label">PRECISA ENTREGAR?</span>
+                    <button class="pedido-choice active" type="button" data-delivery-choice="sim">SIM</button>
+                    <button class="pedido-choice" type="button" data-delivery-choice="nao">NÃO</button>
+                </div>
+            </div>
+
+            <div class="pedido-modal-address" data-address-group>
+                <h3 class="pedido-modal-subtitle pedido-modal-subtitle-address">ENDEREÇO</h3>
+
+                <div class="pedido-modal-address-grid">
+                    <input class="pedido-modal-input" type="text" placeholder="BAIRRO" aria-label="Bairro" data-address-bairro>
+                    <input class="pedido-modal-input" type="text" placeholder="RUA" aria-label="Rua" data-address-rua>
+                    <input class="pedido-modal-input" type="text" placeholder="NUMERO" aria-label="Número" data-address-numero>
+                </div>
+            </div>
+
+            <h3 class="pedido-modal-subtitle">PEDIDOS</h3>
+            <textarea class="pedido-modal-textarea" data-pedido-textarea rows="5" aria-label="Pedidos"></textarea>
+
+            <button class="pedido-modal-submit" type="button">
+                PEDIR AGORA
+                <span class="pedido-modal-arrow">&gt;</span>
+            </button>
+        </section>
+    </div>
+
+    <script src="js/menu-mobile.js"></script>
     <script src="js/todosProdutos.js"></script>
+    <script src="js/pedido-modal.js"></script>
 </body>
 
 </html>
