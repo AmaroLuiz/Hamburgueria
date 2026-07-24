@@ -171,7 +171,6 @@ header {
     left: 0;
     z-index: 5;
     width: 100%;
-    padding-right: 40px;
 }
 
 
@@ -758,9 +757,10 @@ header {
 
 .footer-button {
     display: inline-block;
-    background: #ff5b00;
-    color: white;
-    padding: 15px 35px;
+    background: #000;
+    color: #ff5b00;
+    padding: 8px 18px;
+    border: 2px solid #ff5b00;
     border-radius: 50px;
     font-weight: 600;
     transition: .3s;
@@ -769,6 +769,8 @@ header {
 .footer-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 0 20px rgba(255, 91, 0, .4);
+    background: #ff5b00;
+    color: #000;
 }
 
 .footer-bottom {
@@ -831,43 +833,19 @@ header {
     }
 
     .navbar {
-        position: relative;
-        justify-content: center;
         min-height: 58px;
-        padding: 0 20px;
     }
 
     .menu-toggle {
         display: inline-flex;
-        position: absolute;
-        left: 0;
-        width: 46px;
-        height: 46px;
     }
 
     .empresa {
-        margin-right: 0;
         font-size: 1.45rem;
-        text-align: center;
     }
 
     .menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: min(82vw, 320px);
-        height: 100vh;
-        padding: 92px 22px 24px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 14px;
-        background: rgba(5, 5, 5, 0.98);
-        border-right: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 20px 0 50px rgba(0, 0, 0, 0.35);
-        transform: translateX(-100%);
-        transition: transform 0.28s ease;
-        z-index: 1000;
+        z-index: 1200;
     }
 
     .navbar.menu-open .menu {
@@ -886,14 +864,7 @@ header {
     }
 
     .menu-backdrop {
-        display: block;
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.55);
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.28s ease;
-        z-index: 999;
+        z-index: 1150;
     }
 
     .menu-backdrop.visible {

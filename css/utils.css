@@ -337,9 +337,10 @@ html {
 
 .footer-button {
 	display: inline-block;
-	background: #ff5b00;
-	color: white;
-	padding: 15px 35px;
+	background: #000;
+	color: #ff5b00;
+	padding: 8px 18px;
+	border: 2px solid #ff5b00;
 	border-radius: 50px;
 	font-weight: 600;
 	transition: .3s;
@@ -348,6 +349,8 @@ html {
 .footer-button:hover {
 	transform: translateY(-3px);
 	box-shadow: 0 0 20px rgba(255, 91, 0, .4);
+	background: #ff5b00;
+	color: #000;
 }
 
 .footer-bottom {
@@ -382,25 +385,59 @@ html {
 }
 
 @media (max-width:768px) {
+	.navbar-hero {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: min(1400px, 92vw);
+		margin: 0 auto;
+		padding: 24px 0 0;
+		z-index: 5;
+		position: relative;
+	}
+
 	.navbar {
+		display: flex;
+		align-items: center;
 		justify-content: center;
+		z-index: 1100;
+		position: fixed;
+		padding: 10px;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 20px;
+		background: rgba(0, 0, 0, .75);
+		backdrop-filter: blur(12px);
 		min-height: 58px;
-		padding: 0 20px;
+		width: calc(100% - 20px);
+		max-width: 500px;
+	}
+
+	.navbar article {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
 	}
 
 	.menu-toggle {
 		display: inline-flex;
 		position: absolute;
-		left: 0;
-		width: 56px;
-		height: 56px;
-		font-size: 1.8rem;
+		left: 10px;
+		width: 48px;
+		height: 48px;
+		font-size: 1.6rem;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 
 	.empresa {
 		margin-right: 0;
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 		text-align: center;
+		padding-left: 36px;
 	}
 
 	.menu {
@@ -417,13 +454,15 @@ html {
 		background: rgba(5, 5, 5, 0.98);
 		border-right: 1px solid rgba(255, 255, 255, 0.08);
 		box-shadow: 20px 0 50px rgba(0, 0, 0, 0.35);
-		transform: translateX(-100%);
-		transition: transform 0.28s ease;
-		z-index: 1000;
+		transform: translateX(-101%);
+		visibility: hidden;
+		transition: transform 0.28s ease, visibility 0.28s;
+		z-index: 1200;
 	}
 
 	.navbar.menu-open .menu {
 		transform: translateX(0);
+		visibility: visible;
 	}
 
 	.menu li {
@@ -445,7 +484,7 @@ html {
 		opacity: 0;
 		pointer-events: none;
 		transition: opacity 0.28s ease;
-		z-index: 999;
+		z-index: 1150;
 	}
 
 	.menu-backdrop.visible {

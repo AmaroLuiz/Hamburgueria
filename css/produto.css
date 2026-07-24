@@ -6,14 +6,6 @@
     box-sizing: border-box;
 }
 
-.navbar {
-    top: -50px;
-    padding: 10px;
-}
-.empresa {
-    margin-right: 50px;
-}
-
 .text-gigante {
     font-size: 16rem;
     text-align: center;
@@ -389,8 +381,9 @@
     }
 
     .btn-pedir {
-        width: 90%;
-        font-size: 1.5rem;
+        width: 70%;
+        font-size: 1rem;
+		margin: 15%;
     }
 
 

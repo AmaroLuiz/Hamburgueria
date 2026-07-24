@@ -18,26 +18,22 @@
 <body>
     <header>
         <article class="navbar">
-                <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
-                    data-menu-toggle>
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <a class="empresa" href="../index.html">Empresa  Burguer</a>
-                <nav class="menu">
-                    <li>
-                        <a href="#">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="#cardapio">Cardápio</a>
-                    </li>
-                    <li>
-                        <a href="">Localização</a>
-                    </li>
-                    <li class="pedido">
-                        <a href="">Pedir</a>
-                    </li>
-                </nav>
-            </article>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-toggle>
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <a class="empresa" href="../index.html">Empresa Burguer</a>
+            <nav class="menu">
+                <li>
+                    <a href="#">Inicio</a>
+                </li>
+                <li>
+                    <a href="#cardapio">Cardápio</a>
+                </li>
+                <li class="pedido">
+                    <a href="">Pedir</a>
+                </li>
+            </nav>
+        </article>
     </header>
     <div class="menu-backdrop" data-menu-backdrop></div>
     <main>
@@ -59,8 +55,7 @@
                 <span class="preco-produto" data-product-price>R$ 29,90</span>
                 <button class="btn-pedir">
                     PEDIR AGORA
-                    <span class="btn-icone"><i
-                                class="fa-solid fa-chevron-right"></i></span>
+                    <span class="btn-icone"><i class="fa-solid fa-chevron-right"></i></span>
                 </button>
 
             </article>
@@ -71,10 +66,12 @@
         <div class="pedido-modal-backdrop" data-pedido-close></div>
         <section class="pedido-modal-panel" role="dialog" aria-modal="true" aria-labelledby="pedido-modal-title">
             <button class="pedido-modal-close" type="button" aria-label="Fechar janela" data-pedido-close>×</button>
-            <h2 class="pedido-modal-title" id="pedido-modal-title">Antes de prosseguirmos precisamos dos seguintes dados:</h2>
+            <h2 class="pedido-modal-title" id="pedido-modal-title">Antes de prosseguirmos precisamos dos seguintes
+                dados:</h2>
 
             <div class="pedido-modal-client">
-                <input class="pedido-modal-input" type="text" placeholder="NOME DO CLIENTE" aria-label="Nome do cliente" data-client-name>
+                <input class="pedido-modal-input" type="text" placeholder="NOME DO CLIENTE" aria-label="Nome do cliente"
+                    data-client-name>
 
                 <div class="pedido-modal-delivery">
                     <span class="pedido-modal-label">PRECISA ENTREGAR?</span>
@@ -87,9 +84,11 @@
                 <h3 class="pedido-modal-subtitle pedido-modal-subtitle-address">ENDEREÇO</h3>
 
                 <div class="pedido-modal-address-grid">
-                    <input class="pedido-modal-input" type="text" placeholder="BAIRRO" aria-label="Bairro" data-address-bairro>
+                    <input class="pedido-modal-input" type="text" placeholder="BAIRRO" aria-label="Bairro"
+                        data-address-bairro>
                     <input class="pedido-modal-input" type="text" placeholder="RUA" aria-label="Rua" data-address-rua>
-                    <input class="pedido-modal-input" type="text" placeholder="NUMERO" aria-label="Número" data-address-numero>
+                    <input class="pedido-modal-input" type="text" placeholder="NUMERO" aria-label="Número"
+                        data-address-numero>
                 </div>
             </div>
 
@@ -140,7 +139,7 @@
 
                 <ul>
                     <li>📍 Goioerê - PR</li>
-                    <li>📞 (44) 99999-9999</li>
+                    <li>📞 (44) 92001-1084</li>
                     <li>📧 contato@amarosburger.com</li>
                     <li>🕒 Todos os dias • 18h às 23h</li>
                 </ul>
@@ -156,9 +155,9 @@
                     <span>Elo</span>
                 </div>
 
-                <a href="#" class="footer-button">
+                <button class="footer-button btn-pedir">
                     Fazer Pedido
-                </a>
+                </button>
             </div>
 
         </div>
