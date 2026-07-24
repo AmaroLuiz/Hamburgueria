@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        pedidoTextarea.value = `Gostaria de pedir ${productLabel}.${clientName ? ` Cliente: ${clientName}.` : ''}`;
+        pedidoTextarea.value = `Gostaria de pedir ${productLabel}.${clientName ? ` No nome: ${clientName}.` : ''}`;
     };
 
     const openModal = () => {

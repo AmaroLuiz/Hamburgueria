@@ -254,7 +254,7 @@ img {
     background: #111;
     color: #fff;
     padding: 0 20px;
-    font-family: var(--font-title);
+    font-family: var(--font-text);
     font-size: 1.2rem;
     outline: none;
 }
@@ -350,7 +350,38 @@ img {
     font-weight: 700;
 }
 
-@media(max-width:700px) {
+@media(max-width:768px) {
+
+    .text-gigante{
+        font-size: 5.8rem;
+        line-height: 50px;
+    }
+    .troca {
+        display: none;
+    }
+    .tras {
+        margin-left: 0px;
+    }
+    
+    .container img {
+        width: 100%;
+        top: 40px;
+    }
+    .nome-produto {
+        font-size: 3rem;
+    }
+    .descricao-produto {
+        font-size: 20px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .btn-pedir {
+        width: 90%;
+        font-size: 1.5rem;
+    }
+
+
     .pedido-modal-panel {
         max-height: calc(100vh - 32px);
         padding: 28px 20px 24px;

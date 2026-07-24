@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const imagePath = 'img/heroPNG2.png';
-    const productImagePath = '../img/heroPNG2.png';
+    const imagePath = 'img/heroPNG2.webp';
+    const productImagePath = '../img/heroPNG2.webp';
     const productPagePath = 'html/produto.html';
 
     const heroProducts = [

@@ -17,6 +17,9 @@
 
 <body>
     <header class="navbar">
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-toggle>
+            <i class="fa-solid fa-bars"></i>
+        </button>
         <a class="empresa" href="../index.html">Empresa Burguer</a>
         <nav class="menu">
             <li>
@@ -33,6 +36,7 @@
             </li>
         </nav>
     </header>
+    <div class="menu-backdrop" data-menu-backdrop></div>
     <main>
         <section class="container">
             <div class="top-gradient"></div>
@@ -96,6 +100,7 @@
         </section>
     </div>
 
+    <script src="../js/menu-mobile.js"></script>
     <script src="../js/produto.js"></script>
     <footer class="footer">
 

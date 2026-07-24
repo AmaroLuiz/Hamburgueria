@@ -134,6 +134,8 @@ html {
 	align-items: center;
 	justify-content: center;
 	margin-top: 10px;
+	position: relative;
+	width: 100%;
 }
 
 .navbar-hero {
@@ -174,6 +176,22 @@ html {
 	color: white;
 	font-style: normal;
 	text-decoration: none;
+}
+
+.menu-toggle {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	border: 0;
+	background: transparent;
+	color: #fff;
+	font-size: 1.4rem;
+	cursor: pointer;
+	z-index: 1002;
+}
+
+.menu-backdrop {
+	display: none;
 }
 
 .navbar-hero .menu {
@@ -328,6 +346,82 @@ html {
 		flex-direction: column;
 		gap: 18px;
 		padding-top: 18px;
+	}
+}
+
+@media (max-width:768px) {
+	.navbar {
+		justify-content: center;
+		min-height: 58px;
+		padding: 0 20px;
+	}
+
+	.menu-toggle {
+		display: inline-flex;
+		position: absolute;
+		left: 0;
+		width: 46px;
+		height: 46px;
+	}
+
+	.empresa {
+		margin-right: 0;
+		font-size: 1.45rem;
+		text-align: center;
+	}
+
+	.menu {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: min(82vw, 320px);
+		height: 100vh;
+		padding: 92px 22px 24px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 14px;
+		background: rgba(5, 5, 5, 0.98);
+		border-right: 1px solid rgba(255, 255, 255, 0.08);
+		box-shadow: 20px 0 50px rgba(0, 0, 0, 0.35);
+		transform: translateX(-100%);
+		transition: transform 0.28s ease;
+		z-index: 1000;
+	}
+
+	.navbar.menu-open .menu {
+		transform: translateX(0);
+	}
+
+	.menu li {
+		display: block;
+		margin: 0;
+	}
+
+	.menu a {
+		display: block;
+		padding: 12px 0;
+		font-size: 1.05rem;
+	}
+
+	.menu-backdrop {
+		display: block;
+		position: fixed;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.55);
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.28s ease;
+		z-index: 999;
+	}
+
+	.menu-backdrop.visible {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	body.menu-open {
+		overflow: hidden;
 	}
 }
 
