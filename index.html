@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preload" as="image" href="img/heroWEBP.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" fetchpriority="high" as="image" href="img/heroWEBP.webp">
 
     <link rel="canonical" href="https://empresaburger.com.br/">
     <link rel="icon" type="image/png" href="img/logo-PNG.png">
@@ -20,13 +23,12 @@
     <title>Empresa Burger | O Melhor Hambúrguer Artesanal de Goioerê</title>
 
 
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print" onload="this.media='all'">
 
-    <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/utils.css">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Empresa Burger | O melhor hambúrguer da cidade">
@@ -65,7 +67,7 @@
 
             <div class="top-gradient"></div>
 
-            <img id="inicio" fetchpriority="high" src="img/heroWEBP.webp" alt="imagem da home">
+            <img id="inicio" rel="preload" src="img/heroWEBP.webp" alt="imagem da home" fetchpriority="high">
 
             <div class="bottom-gradient"></div>
 
@@ -364,14 +366,14 @@
                 </p>
                 <div class="destaque-feture">
                     <div class="feature">
-                        <img class="feature-hamburguer" src="img/hamburguer.png" alt="">
+                        <img class="feature-hamburguer" src="img/hamburguer.png" alt="icone de hambuguer">
                         <div class="feature-text">
                             <h4 class="destaque-icon-title"><strong>180g de carne</strong></h4>
                             <p class="destaque-icon-text">hamburguer artesanal<br>feito na hora</p>
                         </div>
                     </div>
                     <div class="feature">
-                        <img src="img/queijo.png" alt="">
+                        <img src="img/queijo.png" alt="icone de queijo">
                         <div class="feature-text">
                             <h4 class="destaque-icon-title"><strong>Queijo cheddar</strong></h4>
                             <p class="destaque-icon-text">duplo cheddar<br>cremoso e derretido</p>
@@ -380,8 +382,8 @@
                 </div>
             </div>
             <img class="destaque-hamburguer" src="img/hamburguer-inicial.webp" alt="hamburguer do destaque">
-            <img class="destaque-salsinha-1" src="img/salsinha.webp" alt="">
-            <img class="destaque-salsinha-2" src="img/salsinha.webp" alt="">
+            <img class="destaque-salsinha-1" src="img/salsinha.webp" alt="imagem de salsinha">
+            <img class="destaque-salsinha-2" src="img/salsinha.webp" alt="imagem de salsinha">
         </section>
 
         <section class="menu-categorias">
