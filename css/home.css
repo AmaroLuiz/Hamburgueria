@@ -6,35 +6,6 @@
     box-sizing: border-box;
 }
 
-.bebas-neue-regular {
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.poppins-regular {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.poppins-semibold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-}
-
-.poppins-bold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-:root {
-    --font-title: "Bebas Neue", sans-serif;
-    --font-text: "Poppins", sans-serif;
-}
-
 html {
     background-color: black;
 }
@@ -91,7 +62,6 @@ header {
 
 .hero-text h1 {
     color: white;
-    font-family: var(--font-title);
     font-size: 8.5rem;
     line-height: 8rem;
 }
@@ -105,7 +75,6 @@ header {
 .hero-text p {
     color: white;
     font-size: 1.4rem;
-    font-family: var(--font-text);
     opacity: 90%;
 }
 
@@ -129,7 +98,6 @@ header {
     text-decoration: none;
     font-size: 1.6rem;
     font-weight: 300;
-    font-family: var(--font-text);
     border-radius: 15px;
     width: 220px;
     transition: transform 0.5s ease;
@@ -244,7 +212,6 @@ header {
 .review-user h3 {
     color: white;
     font-size: 2rem;
-    font-family: var(--font-text);
     font-weight: 500;
 }
 
@@ -259,7 +226,6 @@ header {
 .review-info span {
     color: #7d7d7d;
     font-size: 1rem;
-    font-family: var(--font-text);
 }
 
 .stars {
@@ -272,7 +238,6 @@ header {
 .review-card p {
     margin-top: 30px;
     color: white;
-    font-family: var(--font-text);
     font-size: 1.15rem;
     line-height: 1.8;
 }
@@ -316,7 +281,6 @@ header {
 .destaque-title {
     margin-top: 100px;
 
-    font-family: var(--font-title);
     font-size: 6rem;
     font-weight: 100;
     letter-spacing: 10%;
@@ -324,7 +288,6 @@ header {
 }
 
 .destaque-text {
-    font-family: var(--font-text);
     color: rgba(255, 255, 255, 0.8);
     text-align: left;
     font-size: 1.8em;
@@ -360,7 +323,6 @@ header {
     display: flex;
     flex-direction: column;
     margin-left: 10px;
-    font-family: var(--font-text);
 }
 
 .feature-text h4 {
@@ -417,7 +379,6 @@ header {
 }
 
 .titulo-cardapio {
-    font-family: var(--font-title);
     color: white;
     font-size: 4rem;
     margin-bottom: 35px;
@@ -439,7 +400,6 @@ header {
     color: #bdbdbd;
 
     font-size: 1rem;
-    font-family: var(--font-text);
 
     cursor: pointer;
     transition: .25s;
@@ -477,7 +437,6 @@ header {
 .card-price {
     color: #d8d8d8;
     font-size: 1.3rem;
-    font-family: var(--font-text);
 }
 
 .card-image {
@@ -505,7 +464,6 @@ header {
 .card-body h3 {
     margin-top: 10px;
     color: #ff5b00;
-    font-family: var(--font-title);
     font-size: 2.4rem;
     letter-spacing: 2px;
 }
@@ -513,7 +471,6 @@ header {
 .card-body p {
     margin-top: 15px;
     color: #d6d6d6;
-    font-family: var(--font-text);
     font-size: .95rem;
     line-height: 1.7;
 }
@@ -548,7 +505,6 @@ header {
     width: 45px;
     text-align: center;
     color: white;
-    font-family: var(--font-text);
 }
 
 
