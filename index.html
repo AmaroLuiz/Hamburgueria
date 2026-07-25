@@ -2,13 +2,14 @@
 <html lang="pt-br">
 
 <head>
+    <link rel="preload" fetchpriority="high" as="image" href="img/heroWEBP.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="preload" fetchpriority="high" as="image" href="img/heroWEBP.webp">
+    
 
     <link rel="canonical" href="https://empresaburger.com.br/">
     <link rel="icon" type="image/png" href="img/logo-PNG.png">
@@ -88,7 +89,7 @@
                         <a href="#cardapio">Cardápio</a>
                     </li>
                     <li class="pedido">
-                        <a href="">Pedir</a>
+                        <button class="footer-button buy-btn">Pedir</button>
                     </li>
                 </nav>
             </article>
@@ -98,10 +99,10 @@
                 <p>Ingredientes <strong>frescos</strong>,<br>sabor <strong>intenso</strong> e uma <br>experiência que
                     faz você voltar.
                 </p>
-                <article class="btns-hero">
-                    <a class="btn-hero-text pedido" href="">Fazer pedido</a>
-                    <a class="btn-hero-text cardapio" href="#cardapio">Cardápio</a>
-                </article>
+        <article class="btns-hero">
+            <button class="btn-hero-text pedido buy-btn">Fazer pedido</button>
+            <a class="btn-hero-text cardapio" href="#cardapio">Cardápio</a>
+        </article>
             </article>
         </section>
     </header>
@@ -423,7 +424,7 @@
             <article class="card">
                 <span class="card-price">R$ 29,90</span>
                 <div class="card-image">
-                    <img src="img/heroPNG2.webp" alt="Hambúrguer">
+                    <img src="img/heroPNG.webp" alt="Hambúrguer">
                 </div>
                 <div class="card-body">
                     <h3>COMBO FOME</h3>
@@ -718,7 +719,7 @@
 
             </article>
         </section>
-        <button class="btn-pedir">
+        <button class="btn-pedir buy-btn">
             PEDIR AGORA
             <span class="btn-icone"><i class="fa-solid fa-chevron-right"></i></span>
         </button>
@@ -1055,7 +1056,7 @@
             </article>
 
         </section>
-        <button class="btn-pedir">
+        <button class="btn-pedir buy-btn">
             PEDIR AGORA
             <span class="btn-icone"><i class="fa-solid fa-chevron-right"></i></span>
         </button>
@@ -1391,7 +1392,7 @@
 
             </article>
         </section>
-        <button class="btn-pedir">
+        <button class="btn-pedir buy-btn">
             PEDIR AGORA
             <span class="btn-icone"><i class="fa-solid fa-chevron-right"></i></span>
         </button>
@@ -1445,7 +1446,7 @@
                     <span>Elo</span>
                 </div>
 
-                <button class="footer-button">
+                <button class="footer-button buy-btn">
                     Fazer Pedido
                 </button>
             </div>
