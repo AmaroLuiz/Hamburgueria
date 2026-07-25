@@ -40,8 +40,6 @@
 
 .container img {
     position: absolute;
-    /* height: min(80vh, 1000px);
-    width: auto; */
     width: 700px;
     height: 700px;
     object-fit: contain;
@@ -53,7 +51,7 @@
 }
 
 .info {
-    margin-top: 190px;
+    margin-top: 240px;
     display: flex;
     flex-direction: column;
 }
@@ -127,6 +125,7 @@
     border-radius: 50%;
     margin-left: 20px;
 }
+
 
 .btn-pedir:hover {
     background-color: #E64A00;
