@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.add('menu-open');
             document.body.classList.add('menu-open');
             menuToggle.setAttribute('aria-expanded', 'true');
-
+            
             if (backdrop) {
                 backdrop.classList.add('visible');
             }

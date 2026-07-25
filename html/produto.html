@@ -4,32 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <title>Amaro's Burger | Detalhes do Produto</title>
-    <meta name="description" content="Hambúrgueres artesanais preparados com ingredientes frescos. Veja os detalhes e peça agora pelo WhatsApp.">
+    <meta name="description"
+        content="Hambúrgueres artesanais preparados com ingredientes frescos. Veja os detalhes e peça agora pelo WhatsApp.">
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/png" href="../img/logo-PNG.png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print" onload="this.media='all'">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        media="print" onload="this.media='all'">
+
     <link rel="stylesheet" href="../css/utils.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../css/produto.css" media="print" onload="this.media='all'">
-    
+
     <meta property="og:type" content="website">
     <meta property="og:title" content="Empresa Burguer | O melhor hambúrguer da cidade">
     <meta property="og:description" content="Ingredientes frescos, sabor intenso e entrega rápida.">
     <meta property="og:image" content="../img/logo-PNG.png">
     <style>
+        
+
         .navbar {
+            margin-top: 40px;
+
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 10px;
             z-index: 1000;
 
             position: relative;
@@ -100,10 +106,19 @@
             justify-content: center;
             border: 0;
             background: transparent;
-            color: #fff;
-            font-size: 1.4rem;
             cursor: pointer;
             z-index: 1002;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: inline-flex;
+            }
+        }
+
+        .menu-toggle img {
+            width: 30px;
+            height: 30px;
         }
 
         .menu-backdrop {
@@ -158,7 +173,7 @@
     <header>
         <article class="navbar">
             <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-toggle>
-                <i class="fa-solid fa-bars"></i>
+                <img src="../img/hamburguer.svg" alt="Menu" width="30" height="30">
             </button>
             <a class="empresa" href="../index.html">Empresa Burguer</a>
             <nav class="menu">
