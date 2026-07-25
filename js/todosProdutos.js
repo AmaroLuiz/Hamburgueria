@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const imagePath = 'img/heroPNG2.webp';
-    const productImagePath = '../img/heroPNG2.webp';
+    const imagePath = 'img/heroPNG.webp';
+    const productImagePath = '../img/heroPNG.webp';
     const sectionImages = {
         lanches: {
-            display: 'img/heroPNG2.webp',
+            display: 'img/heroPNG.webp',
             product: '../img/heroPNG2.webp',
         },
         porcoes: {
