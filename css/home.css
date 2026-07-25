@@ -267,7 +267,6 @@ header {
     display: flex;
     margin-top: 200px;
     min-height: 850px;
-
     background: url("../img/destaque.webp") no-repeat;
 }
 
@@ -344,7 +343,7 @@ header {
 .destaque-hamburguer {
     position: absolute;
     left: 800px;
-    top: -60px;
+    top: -100px;
     height: 900px;
 }
 
