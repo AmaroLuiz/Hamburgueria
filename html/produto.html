@@ -4,15 +4,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="../css/utils.css">
-    <link rel="stylesheet" href="../css/produto.css">
-    <title>Document</title>
+    
+    <title>Amaro's Burger | Detalhes do Produto</title>
+    <meta name="description" content="Hambúrgueres artesanais preparados com ingredientes frescos. Veja os detalhes e peça agora pelo WhatsApp.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" href="../img/logo-PNG.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <link rel="stylesheet" href="../css/utils.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/produto.css" media="print" onload="this.media='all'">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Empresa Burguer | O melhor hambúrguer da cidade">
+    <meta property="og:description" content="Ingredientes frescos, sabor intenso e entrega rápida.">
+    <meta property="og:image" content="../img/logo-PNG.png">
+    <style>
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            z-index: 1000;
+
+            position: relative;
+            position: fixed;
+            padding: 10px;
+            top: -50px;
+            left: 50%;
+            transform: translate(-50%, 50%);
+
+            border-radius: 20px;
+            background: rgba(0, 0, 0, .75);
+            backdrop-filter: blur(12px);
+        }
+
+        .navbar-hero {
+            position: relative;
+            z-index: 5;
+            justify-content: space-between;
+            align-items: center;
+            width: min(1400px, 92vw);
+            margin: 0 auto;
+            padding: 24px 0 0;
+        }
+
+        .empresa {
+            display: flex;
+            flex-direction: row;
+            text-decoration: none;
+            white-space: nowrap;
+            color: #fff;
+            margin-right: 0;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            z-index: 999;
+            letter-spacing: 2px;
+            margin-right: 50px;
+            align-self: center;
+        }
+
+
+        .menu {
+            list-style: none;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .menu a {
+            color: white;
+            font-style: normal;
+            text-decoration: none;
+        }
+
+
+        .menu .pedido {
+            margin-left: 20px;
+        }
+
+        .menu-toggle {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+            background: transparent;
+            color: #fff;
+            font-size: 1.4rem;
+            cursor: pointer;
+            z-index: 1002;
+        }
+
+        .menu-backdrop {
+            display: none;
+        }
+
+        .navbar-hero .menu {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .navbar-hero .menu li {
+            display: block;
+            margin: 0;
+        }
+
+        .navbar-hero .menu a {
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.82rem;
+            opacity: 0.95;
+        }
+
+        .menu a {
+            position: relative;
+            color: white;
+            text-decoration: none;
+            transition: color .3s;
+        }
+
+        .menu a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+
+            width: 0;
+            height: 2px;
+
+            background: #ff5b00;
+            transition: width .3s ease;
+        }
+
+        .menu a:hover::after {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,10 +180,6 @@
             <div class="top-gradient"></div>
             <h1 class="text-gigante frente" data-product-watermark>HAMBURGUER</h1>
             <h2 class="text-gigante tras" data-product-watermark-back>HAMBURGUER</h2>
-            <div class="troca">
-                <i class="fa-solid fa-chevron-left"></i>
-                <i class="fa-solid fa-chevron-right"></i>
-            </div>
             <img data-product-image src="../img/heroPNG2.png" alt="imagem do banner hero">
             <article class="info">
                 <h2 class="nome-produto" data-product-name>COMBO FOME</h2>

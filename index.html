@@ -3,13 +3,14 @@
 
 <head>
     <link rel="preload" fetchpriority="high" as="image" href="img/heroWEBP.webp">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    
+
 
     <link rel="canonical" href="https://empresaburger.com.br/">
     <link rel="icon" type="image/png" href="img/logo-PNG.png">
@@ -26,7 +27,8 @@
 
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        media="print" onload="this.media='all'">
 
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/utils.css">
@@ -60,6 +62,134 @@
         }
     }
     </script>
+    <style>
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            z-index: 1000;
+
+            position: relative;
+            position: fixed;
+            padding: 10px;
+            top: -50px;
+            left: 50%;
+            transform: translate(-50%, 50%);
+
+            border-radius: 20px;
+            background: rgba(0, 0, 0, .75);
+            backdrop-filter: blur(12px);
+        }
+
+        .navbar-hero {
+            position: relative;
+            z-index: 5;
+            justify-content: space-between;
+            align-items: center;
+            width: min(1400px, 92vw);
+            margin: 0 auto;
+            padding: 24px 0 0;
+        }
+
+        .empresa {
+            display: flex;
+            flex-direction: row;
+            text-decoration: none;
+            white-space: nowrap;
+            color: #fff;
+            margin-right: 0;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            z-index: 999;
+            letter-spacing: 2px;
+            margin-right: 50px;
+            align-self: center;
+        }
+
+
+        .menu {
+            list-style: none;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .menu a {
+            color: white;
+            font-style: normal;
+            text-decoration: none;
+        }
+
+
+        .menu .pedido {
+            margin-left: 20px;
+        }
+
+        .menu-toggle {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+            background: transparent;
+            color: #fff;
+            font-size: 1.4rem;
+            cursor: pointer;
+            z-index: 1002;
+        }
+
+        .menu-backdrop {
+            display: none;
+        }
+
+        .navbar-hero .menu {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .navbar-hero .menu li {
+            display: block;
+            margin: 0;
+        }
+
+        .navbar-hero .menu a {
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.82rem;
+            opacity: 0.95;
+        }
+
+        .menu a {
+            position: relative;
+            color: white;
+            text-decoration: none;
+            transition: color .3s;
+        }
+
+        .menu a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+
+            width: 0;
+            height: 2px;
+
+            background: #ff5b00;
+            transition: width .3s ease;
+        }
+
+        .menu a:hover::after {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -99,10 +229,10 @@
                 <p>Ingredientes <strong>frescos</strong>,<br>sabor <strong>intenso</strong> e uma <br>experiência que
                     faz você voltar.
                 </p>
-        <article class="btns-hero">
-            <button class="btn-hero-text pedido buy-btn">Fazer pedido</button>
-            <a class="btn-hero-text cardapio" href="#cardapio">Cardápio</a>
-        </article>
+                <article class="btns-hero">
+                    <button class="btn-hero-text pedido buy-btn">Fazer pedido</button>
+                    <a class="btn-hero-text cardapio" href="#cardapio">Cardápio</a>
+                </article>
             </article>
         </section>
     </header>
@@ -1468,10 +1598,12 @@
         <div class="pedido-modal-backdrop" data-pedido-close></div>
         <section class="pedido-modal-panel" role="dialog" aria-modal="true" aria-labelledby="pedido-modal-title">
             <button class="pedido-modal-close" type="button" aria-label="Fechar janela" data-pedido-close>×</button>
-            <h2 class="pedido-modal-title" id="pedido-modal-title">Antes de prosseguirmos precisamos dos seguintes dados:</h2>
+            <h2 class="pedido-modal-title" id="pedido-modal-title">Antes de prosseguirmos precisamos dos seguintes
+                dados:</h2>
 
             <div class="pedido-modal-client">
-                <input class="pedido-modal-input" type="text" placeholder="NOME DO CLIENTE" aria-label="Nome do cliente" data-client-name>
+                <input class="pedido-modal-input" type="text" placeholder="NOME DO CLIENTE" aria-label="Nome do cliente"
+                    data-client-name>
 
                 <div class="pedido-modal-delivery">
                     <span class="pedido-modal-label">PRECISA ENTREGAR?</span>
@@ -1484,9 +1616,11 @@
                 <h3 class="pedido-modal-subtitle pedido-modal-subtitle-address">ENDEREÇO</h3>
 
                 <div class="pedido-modal-address-grid">
-                    <input class="pedido-modal-input" type="text" placeholder="BAIRRO" aria-label="Bairro" data-address-bairro>
+                    <input class="pedido-modal-input" type="text" placeholder="BAIRRO" aria-label="Bairro"
+                        data-address-bairro>
                     <input class="pedido-modal-input" type="text" placeholder="RUA" aria-label="Rua" data-address-rua>
-                    <input class="pedido-modal-input" type="text" placeholder="NUMERO" aria-label="Número" data-address-numero>
+                    <input class="pedido-modal-input" type="text" placeholder="NUMERO" aria-label="Número"
+                        data-address-numero>
                 </div>
             </div>
 

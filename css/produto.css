@@ -25,37 +25,6 @@
     text-shadow: 0 18px 30px rgba(255, 255, 255, 0.35);
 }
 
-.troca {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-}
-
-.troca i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100px;
-    height: 100px;
-
-    background: white;
-    color: black;
-
-    border-radius: 50%;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.fa-chevron-right:hover {
-    opacity: 90%;
-}
-
-.fa-chevron-left:hover {
-    opacity: 80%;
-}
-
 .top-gradient {
     position: absolute;
     top: -228px;
