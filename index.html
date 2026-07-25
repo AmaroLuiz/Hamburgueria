@@ -67,7 +67,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 10px;
+            margin-top: 40px;
             z-index: 1000;
 
             position: relative;
@@ -138,10 +138,20 @@
             justify-content: center;
             border: 0;
             background: transparent;
-            color: #fff;
-            font-size: 1.4rem;
             cursor: pointer;
             z-index: 1002;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: inline-flex;
+            }
+        }
+
+        .menu-toggle img {
+            width: 30px;
+            height: 30px;
+            z-index: 10000;
         }
 
         .menu-backdrop {
@@ -208,7 +218,7 @@
             <article class="navbar">
                 <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
                     data-menu-toggle>
-                    <i class="fa-solid fa-bars"></i>
+                    <img src="img/hamburguer.svg" alt="Menu" width="30" height="30">
                 </button>
                 <a class="empresa" href="#inicio">Empresa Burguer</a>
                 <nav class="menu">
