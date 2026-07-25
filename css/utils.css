@@ -108,6 +108,10 @@ html {
 	border-radius: 50%;
 	margin-left: 20px;
 }
+.btn-icone img {
+	width: 100%;
+	height: 100%;
+}
 
 .btn-pedir:hover {
 	background-color: #E64A00;
